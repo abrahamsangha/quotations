@@ -1,23 +1,14 @@
-<div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+<form action="/info" method="post">
+  title: <input type="text" name="search[titles]">
+  property: <input type="text" name="search[property]">
+  limit: <input type="text" name="search[limit]">
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
-</div>
+  <input type="submit" value="Go get it">
+</form>
+
+<!-- ?action=query
+&titles=San_Francisco
+&prop=images
+&imlimit=20
+&format=jsonfm
+ -->
